@@ -1,0 +1,7 @@
+  @Manual{,
+    title = {rlist: A Toolbox for Non-Tabular Data Manipulation},
+    author = {Kun Ren},
+    year = {2016},
+    note = {R package version 0.4.6.1},
+    url = {https://CRAN.R-project.org/package=rlist},
+  }
