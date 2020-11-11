@@ -14,7 +14,7 @@ table_Cant<-left_join(table_Cant, samplesbyyear, by=c("G2year", "layer"))
     geom_point(size=2.5, shape=15)+
     geom_point(size=2.5, shape=0, color="black", stroke=1.3)+
     geom_point(data=table_Cant[table_Cant$layer=="AABW",], size=2.5, shape=15, color="#66a61e")+
-    geom_text(aes(label=n), nudge_x=4, nudge_y=-1, fontface="bold",check_overlap=TRUE)+ 
+    ggrepel::geom_text_repel(aes(label=n, color=layer), fontface="bold")+
     annotate("text", x=328, y=78, label=sum(table_Cant$n[table_Cant$G2year==1972], na.rm=T), angle=45)+
     annotate("text", x=350, y=78, label=sum(table_Cant$n[table_Cant$G2year==1988], na.rm=T), angle=45)+
     annotate("text", x=354, y=78, label=sum(table_Cant$n[table_Cant$G2year==1989], na.rm=T), angle=45)+
@@ -37,5 +37,4 @@ table_Cant<-left_join(table_Cant, samplesbyyear, by=c("G2year", "layer"))
     ABtrends_theme+
     theme(legend.position = "none",
           text = element_text(colour="black"))
-
 
