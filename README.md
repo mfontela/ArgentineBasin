@@ -1,7 +1,7 @@
-# ArgentineBasin
+# Argentine Basin
 Code and data to reproduce the study "Climate Change Stressors in Argentine Basin Water Masses" by Marcos Fontela.
 
-# steps
+## Steps
 Run "ABtrends_masterscript.R"
 
 When used, please cite the original work: 
