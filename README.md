@@ -1,5 +1,5 @@
 # Argentine Basin
-Code and data to reproduce the study "Anthropogenic CO_2_ and ocean acidification in Argentine Basin Water Masses over almost five decades of observations" by Marcos Fontela.
+Code and data to reproduce the study "Anthropogenic CO~2~ and ocean acidification in Argentine Basin Water Masses over almost five decades of observations" by Marcos Fontela.
 
 ## Steps
 Run *"ABtrends_masterscript.R"*
