@@ -10,7 +10,7 @@ if (local==0) {
   file  <- tempfile()
   download.file(url,file)
 } else {
-  file<-'~/a16s_hy1.csv'
+  file<-'C:/Users/MFontela/Nextcloud/ABtrends/DATA/CCHDO data/a16s_hy1.csv'
 }
 
 SAVE5 <- read_csv(file, skip=10,
@@ -28,7 +28,7 @@ url <- 'https://cchdo.ucsd.edu/data/9581/save4_318M19881207_hy1.csv'
 file  <- tempfile()
 download.file(url,file)
 } else {
-  file<-'~/save4_318M19881207_hy1.csv'
+  file<-'C:/Users/MFontela/Nextcloud/ABtrends/DATA/CCHDO data/save4_318M19881207_hy1.csv'
 }
 SAVE4 <- read_csv(file, skip=6, 
                   col_types = cols(DEPTH = col_number(), CTDRAW = col_number(), CTDPRS = col_number(),
@@ -46,7 +46,7 @@ url <- 'https://cchdo.ucsd.edu/data/7737/a16c_hy1.csv'
 file  <- tempfile()
 download.file(url,file)
 } else {
-  file<-'~/a16c_hy1.csv'
+  file<-'C:/Users/MFontela/Nextcloud/ABtrends/DATA/CCHDO data/a16c_hy1.csv'
 }
 HYDROS4 <- read_csv(file, skip=4, 
                     col_types = cols(DEPTH = col_number(), CTDRAW = col_number(), CTDPRS = col_number(),
@@ -153,6 +153,10 @@ extendedCCHDO<-extendedCCHDO%>%
   rename(G2station=STNNBR, G2cast=CASTNO, G2bottle=SAMPNO, G2latitude=LATITUDE, G2longitude=LONGITUDE,
          G2salinity=SALNTY, G2theta=THETA, G2pressure=CTDPRS, G2oxygen=OXYGEN, G2nitrate=NITRAT, G2phosphate=PHSPHT, G2silicate=SILCAT)%>%
   mutate(G2depth=swDepth(G2pressure,G2latitude)) #compute depth from pressure (oce package swDepth)
+
+  
+
+#Hay que sumar estos a los de G2
 
 
 

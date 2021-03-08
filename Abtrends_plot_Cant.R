@@ -1,8 +1,8 @@
 # Final plot Cant --------------------------------------------------------------
-source("metafuncion_weighted.R")
+source("metafunction_weighted.R")
 
 table_Cant<-left_join(finalA, 
-                       metafuncion_weighted(finalA, finalA$cAntPhiCt0ML, finalAerror$cAntPhiCt0ML)%>%
+                       metafunction_weighted(finalA, finalA$cAntPhiCt0ML, finalAerror$cAntPhiCt0ML)%>%
                          mutate(tracer="Cant"),
                        by="layer")
 table_Cant$layer <- factor(table_Cant$layer,levels=ord)
@@ -32,7 +32,7 @@ plot_Cant<-ggplot(table_Cant,aes(ppm, cAntPhiCt0ML, group=layer, color=layer))+
 
 
 
-if (guardarfigure) {
+if (savefigure) {
   ggsave(filename = "Fontela_ABtrends_Cant.pdf",
          plot=plot_Cant, dpi = 300, width = 17, height = 12, units = "cm")
 }

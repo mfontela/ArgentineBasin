@@ -1,8 +1,8 @@
 # Final plot xcCO3 --------------------------------------------------------------
-source("metafuncion_weighted.R")
+source("metafunction_weighted.R")
 
 table_xcCO3<-left_join(finalA, 
-                  metafuncion_weighted(finalA, finalA$xcCO3, finalAerror$xcCO3)%>%
+                  metafunction_weighted(finalA, finalA$xcCO3, finalAerror$xcCO3)%>%
                     mutate(tracer="xcCO3"),
                   by="layer")
 table_xcCO3$layer <- factor(table_xcCO3$layer,levels=ord)
@@ -36,7 +36,7 @@ plot_xcCO3<-ggplot(table_xcCO3,aes(ppm, xcCO3*10^6, group=layer, color=layer))+
         axis.text.x.top = element_text(angle = 45, hjust = 0, size=8))
 
 
-if (guardarfigure) {
+if (savefigure) {
   ggsave(filename = "Fontela_ABtrends_xcCO3.pdf",
          plot= plot_xcCO3, dpi = 300, width = 17, height = 12, units="cm")
 }

@@ -27,5 +27,7 @@ guardarfigure=0; viewfigure=0
 source("ABtrends_plot_SuppInfo1.R") #Figure S1
 source("ABtrends_plot_SuppInfo2.R") #Figure S2
 source("ABtrends_plot_SuppInfo3.R") #Figure S3
+source("ABtrends_plot_SuppInfo4.R") #Figure S4
+source("ABtrends_plot_SuppInfo5.R") #Figure S5
 
 print(paste("Done in", ceiling(Sys.time()-t0), "seconds"))

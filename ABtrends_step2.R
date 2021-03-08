@@ -15,15 +15,24 @@ phiCant<-phiCant%>%
 all<-full_join(all, phiCant, by=c("ID", "G2year","layer"))
 all$layer <- factor(all$layer,levels=ord)
 
+# Add DICnat (DIC-Cant) ---------------------------------------------------
+
+all$DICnat=all$ct-all$cAntPhiCt0ML
+
+# Add nDIC ----------------------------------------------------------------
+
+all$nDIC=(all$DIC/all$G2salinity)*35
+
+
 # Final tables ----------------------------------------------------
 
 finalA<-all %>%
   group_by(G2year, layer)%>%
-  summarise_at(vars(G2pressure:cStar), mean, na.rm = TRUE)
+  summarise_at(vars(G2pressure:nDIC), mean, na.rm = TRUE)
 
 finalAerror<-all %>%
   group_by(G2year, layer)%>%
-summarise_at(vars(G2pressure:cStar), sd, na.rm = TRUE)
+summarise_at(vars(G2pressure:nDIC), sd, na.rm = TRUE)
 
 #Do not include 2009 data for AABW: very few samples (4-8) and not enough representative for this water mass. See map_year.
 finalA$xcCO3[finalA$G2year==2009 & finalA$layer=="AABW"]=NA 
@@ -43,3 +52,5 @@ finalA$G2aou[finalA$G2year==2009 & finalA$layer=="AABW"]=NA
 finalA$G2nitrate[finalA$G2year==2009 & finalA$layer=="AABW"]=NA 
 finalA$G2phosphate[finalA$G2year==2009 & finalA$layer=="AABW"]=NA 
 finalA$G2silicate[finalA$G2year==2009 & finalA$layer=="AABW"]=NA
+finalA$DICnat[finalA$G2year==2009 & finalA$layer=="AABW"]=NA
+finalA$nDIC[finalA$G2year==2009 & finalA$layer=="AABW"]=NA

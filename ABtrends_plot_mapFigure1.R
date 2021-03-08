@@ -1,4 +1,4 @@
-# Dibuja el mapa ----------------------------------------------------------
+# Picture the base map ----------------------------------------------------------
 t0<-Sys.time()
 
 stations<-all%>%
@@ -7,7 +7,7 @@ stations<-all%>%
   dplyr::distinct(G2longitude, G2latitude,.keep_all = TRUE)
   
 
-#Le llamo m de map!
+#m from map!
 m <- getNOAA.bathy(lon1 = ABasin[1,1]-4, lon2 = ABasin[2,1]+5,
                      lat1 = ABasin[1,2]-5, lat2 = ABasin[2,2]+3, resolution = 1) #Subiendo la resoluci?n va m?s r?pido. El uno es el menor. 
 
@@ -45,12 +45,12 @@ m <- getNOAA.bathy(lon1 = ABasin[1,1]-4, lon2 = ABasin[2,1]+5,
         legend.title = element_blank())
   )
 
-guardarfigure=1
-if (guardarfigure) {
+savefigure=0
+if (savefigure) {
 ggsave(filename = "ABtrends_map.pdf",
        plot=basemap, dpi = 300, width = 20, height = 23, units="cm")
 }
-abrirfigura=1
+abrirfigura=0
 if (abrirfigura) {
   shell.exec("ABtrends_map.pdf")
 }

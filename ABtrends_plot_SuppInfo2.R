@@ -38,3 +38,4 @@ table_Cant<-left_join(table_Cant, samplesbyyear, by=c("G2year", "layer"))
     theme(legend.position = "none",
           text = element_text(colour="black"))
 
+

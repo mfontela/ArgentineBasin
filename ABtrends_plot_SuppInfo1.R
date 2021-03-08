@@ -7,7 +7,7 @@ ggplot(., aes(G2month))+
   geom_bar()+
   scale_y_log10(expand=c(0,0))+
   scale_x_continuous(expand=c(0,0), breaks=seq(1,12), labels = c("J", "F", "M", "A", "M", "J" , "J", "A", "S", "O", "N", "D"))+
-  ABtrends_theme+
+  Fontela_theme+
   labs(x="Month", y="Number of samples (log scale)")+
   theme(legend.position = "none",
         text = element_text(colour="black"),

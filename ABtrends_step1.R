@@ -1,7 +1,7 @@
 # Load GLODAP ------------------------------------------------------------
-local_file=1 #Faster when local file is available, obvious.
+local_file=0 #Faster when local file is available, obvious.
 if (local_file) {
-  A<-readMat("C:/Users/MFontela/Nextcloud/Database/GLODAP/GLODAPv2.2020_Atlantic_Ocean.mat") #find your local copy of file GLODAPv2.2020_Atlantic_Ocean.mat 
+  A<-readMat("GLODAPv2.2020_Atlantic_Ocean.mat") #find your local copy of file GLODAPv2.2020_Atlantic_Ocean.mat 
 } else{
   #Alternative: download the .mat file directly from the GLODAPv2 web (https://www.glodap.info/index.php/merged-and-adjusted-data-product/)
   library(utils)
@@ -108,7 +108,7 @@ all$layer <- factor(all$layer,levels=ord)
 # Add atmospheric CO2 -----------------------------------------------------
 
 source("annual_pCO2atm.R")
-#A CO2 data.frame with year and ppm annual concentration
+#A CO2 data.frame with year and ppm annual concentration at South Pole [South Hemisphere representative]
 CO2<-rename(CO2, G2year=year) #To match the name in G2
 all<-left_join(all, CO2, by="G2year")
 
