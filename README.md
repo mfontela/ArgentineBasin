@@ -2,7 +2,7 @@
 Code and data to reproduce the study "Anthropogenic CO<sub>2</sub> and ocean acidification in Argentine Basin Water Masses over almost five decades of observations" by Marcos Fontela.
 
 
-![image](https://zenodo.org/badge/DOI/10.5281/zenodo.4589961.svg) [link](https://zenodo.org/record/4589961)
+[![image](https://zenodo.org/badge/DOI/10.5281/zenodo.4589961.svg)](https://zenodo.org/record/4589961)
 
 
 ## Steps
