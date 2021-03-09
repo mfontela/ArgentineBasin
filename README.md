@@ -1,4 +1,4 @@
-# Argentine Basin
+# Tracer trends in Argentine Basin Water Masses
 Code and data to reproduce the study "Anthropogenic CO<sub>2</sub> and ocean acidification in Argentine Basin Water Masses over almost five decades of observations" by Marcos Fontela.
 
 
