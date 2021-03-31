@@ -11,5 +11,5 @@ Run *"ABtrends_masterscript.R"*
 When used, please cite the original work: 
 
 
-*Marcos Fontela, Antón Velo, Miguel Gilcoto, Fiz F. Pérez. Anthropogenic CO<sub>2</sub> and ocean acidification in Argentine Basin Water Masses over almost five decades of observations. 2021. Science of the Total Environment. (In review)*
+*Marcos Fontela, Antón Velo, Miguel Gilcoto, Fiz F. Pérez. [Anthropogenic CO<sub>2</sub> and ocean acidification in Argentine Basin Water Masses over almost five decades of observations](https://www.sciencedirect.com/science/article/pii/S0048969721016387). 2021. Science of the Total Environment. Volume 779, 2021, 146570, https://doi.org/10.1016/j.scitotenv.2021.146570*
 
